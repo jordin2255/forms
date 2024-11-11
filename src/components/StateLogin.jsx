@@ -9,6 +9,9 @@ export default function Login() {
   const emailIsInvalid = didEdit.email && !enteredValues.email.includes("@");
   function handleSubmit(event) {
     event.preventDefault();
+    if(emailIsInvalid){
+      return;
+     }
     console.log(enteredValues);
   }
 
